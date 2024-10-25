@@ -14,7 +14,7 @@ const produkSchema = new mongoose.Schema({
         type: Number,
     },
     kategori_id: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Kategori',
         required: true,
     }
