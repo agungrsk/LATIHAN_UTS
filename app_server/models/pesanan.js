@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ulasanSchema = new mongoose.Schema({
+const pesananSchema = new mongoose.Schema({
     produk_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Produk',
@@ -11,16 +11,16 @@ const ulasanSchema = new mongoose.Schema({
         ref: 'Pengguna',
         required: true,
     },
-    rating: {
+    jumlah: {
         type: Number,
     },
-    komentar: {
+    status: {
         type: String,
     },
-    tanggal_ulasan: {
+    tanggal_pesanan: {
         type: Date,
     }
 });
 
-const Ulasan = mongoose.model('Ulasan', ulasanSchema);
-module.exports = Ulasan;
+const Pesanan = mongoose.model('Pesanan', pesananSchema);
+module.exports = Pesanan;

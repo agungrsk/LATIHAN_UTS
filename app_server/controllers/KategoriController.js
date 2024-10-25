@@ -1,0 +1,1 @@
+const Kategori = require('../models/kategori');
